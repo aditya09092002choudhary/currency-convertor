@@ -1,18 +1,17 @@
 body {
     background-color: #f4df4eff;
     margin: 0;
+    
 }
 
 .container {
-    border: 1px solid;
+    border: 2px solid;
     display: inline-block;
-    /* margin: 100px auto;  */
     position: relative;
-    left: 130px;
     background-color:#949398ff ;
     color: #f4df4eff;
     font-family: 'Courier New', Courier, monospace;
-    padding: 7px;
+    padding: 15px;
 }
 h1 {
     font-size: 3rem;
@@ -28,14 +27,15 @@ select {
 }
 input{
     font-size: 25px;
+    outline: none;
 }
 
 span {
-    font-size: 30px;
+    font-size: 25px;
 }
 
 button {
-    font-size: 30px;
+    font-size: 25px;
 }
 button[type = "submit"]{
     background-color: #f4df4eff;
@@ -47,14 +47,58 @@ button[type="reset"]{
     background-color:#949398ff;
     border: 2px solid;
 }
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+}
+.element{
+    margin-top: 10px;
+    font-size: 25px;
+    font-weight: bold;
+}
+.buttons{
+    justify-self: flex-end;
+}
+select{
+    width: 100%;
+}
 @media (max-width: 700px) {
-    .container{
-        position: static;
-        font-size: medium;
-        width: 1000px;
-        
+    body{
+        display: flex;
+    justify-content: center;
+    align-items: center;
     }
-   
     
+    .container>h1{
+        font-size: 30px;
+        /* border: 1px solid; */
+        text-align: center;
+    }
+    .element{
+        font-size: 20px;
+    }
+    input{
+        font-size: 20px;
+        width: 98%;
+    }
+    .buttons{
+        text-align: end;
+        font-size: 20px;
+    }
+    button{
+        font-size: 20px;
+    }
+    .grid{
+        display: unset;
+    }
+    select{
+        font-size: 20px;
+    }
 }
   
